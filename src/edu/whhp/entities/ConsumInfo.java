@@ -23,7 +23,6 @@ public class ConsumInfo {
 	private int consumData;// 消费数据
 	
 	public ConsumInfo(String cardNumber, String type, int consumData) {
-		super();
 		this.cardNumber = cardNumber;
 		this.type = type;
 		this.consumData = consumData;

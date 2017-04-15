@@ -43,8 +43,6 @@ public class NetPackage extends ServicePackage implements NetService {
 			if (this.flow - card.getRealFlow() >= 0) {
 				// 第一种情况：套餐剩余流量大于0
 				card.setRealFlow(card.getRealFlow() + 1);// 实际流量加1
-				card.setMoney(Common.sub(card.getMoney(), 0.1));
-				card.setConsumAmount(card.getConsumAmount() + 0.1);
 			} else if (card.getMoney() >= 0.1) {
 				// 第二种情况：套餐流量已用完，账户余额还可以支付1MB流量
 				card.setRealFlow(card.getRealFlow() + 1);// 实际流量加1

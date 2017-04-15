@@ -54,8 +54,6 @@ public class TalkPackage extends ServicePackage implements CallService, SendServ
 			if (this.smsCount - card.getRealSMSCount() >= 0) {
 				// 第一种情况：套餐剩余短信数大于0
 				card.setRealSMSCount(card.getRealSMSCount() + 1);// 实际短信数据加1
-				card.setMoney(Common.sub(card.getMoney(), 0.1));
-				card.setConsumAmount(card.getConsumAmount() + 0.1);
 			} else if (card.getMoney() >= 0.1) {
 				// 第二种情况：套餐短信数已用完，账户余额还可以支付一条短信
 				card.setRealSMSCount(card.getRealSMSCount() + 1);// 实际短信数据加1
@@ -77,8 +75,6 @@ public class TalkPackage extends ServicePackage implements CallService, SendServ
 			if (this.talkTime - card.getRealTalkTime() >= 1) {
 				// 第一种情况：套餐剩余通话时长可以支持一分钟通话
 				card.setRealTalkTime(card.getRealTalkTime() + 1);// 实际通话数据加1
-				card.setMoney(Common.sub(card.getMoney(), 0.2));
-				card.setConsumAmount(card.getConsumAmount() + 0.2);
 			} else if (card.getMoney() >= 0.2) {
 				// 第二种情况：套餐通话时长已用完，账户余额可以支付1分钟通话，使用账户余额支付
 				card.setRealTalkTime(card.getRealTalkTime() + 1);// 实际通话时长1分钟

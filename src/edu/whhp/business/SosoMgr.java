@@ -195,7 +195,7 @@ public class SosoMgr {
 		card.setMoney(input.nextInt());
 		while (card.getMoney() < serPackage.getPrice()) {
 			System.out.print("您预存的话费金额不足以支付本月固定套餐资费，请重新充值:");
-			card.setMoney(input.nextInt());
+			card.setMoney(card.getMoney()+input.nextInt());
 		}
 		cardU.addCard(card);
 		this.number = card.getCardNumber();

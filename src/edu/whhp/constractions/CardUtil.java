@@ -262,6 +262,7 @@ public class CardUtil {
 					}
 					// 添加一条消费记录,更新数据
 					addConsumInfo(number, new ConsumInfo(number, scene.getType(), temp));
+					System.out.println("已添加一条消费记录！");
 					break;
 				} else {
 					// 如果该卡套餐不支持通话功能，则重新生成随机数选择其他场景
@@ -282,6 +283,7 @@ public class CardUtil {
 					}
 					// 添加一条消费记录
 					addConsumInfo(number, new ConsumInfo(number, scene.getType(), temp));
+					System.out.println("已添加一条消费记录！");
 					break;
 				} else {
 					continue;
@@ -301,6 +303,7 @@ public class CardUtil {
 					}
 					// 添加一条消费记录
 					addConsumInfo(number, new ConsumInfo(number, scene.getType(), temp));
+					System.out.println("已添加一条消费记录！");
 					break;
 				} else {
 					continue;
